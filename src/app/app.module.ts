@@ -5,24 +5,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { AboutComponent } from './about/about.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProfileService } from './profile-service/profile.service';
+import {FormsModule } from '@angular/forms';
+import { GithubProfileComponent } from './github-profile/github-profile.component';
+ 
 import { DateCountPipe } from './date-count.pipe';
-
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     NavbarComponent,
-    GithubProfileComponent,
     AboutComponent,
+    GithubProfileComponent,
+  
     DateCountPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
