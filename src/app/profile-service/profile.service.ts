@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
-//import { userInfo } from 'os';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
-  // public users:string;
+  
   users:any;
   user:User;
   
